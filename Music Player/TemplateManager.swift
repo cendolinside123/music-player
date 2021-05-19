@@ -148,9 +148,15 @@ extension TemplateManager {
         let image_contentGallowParkers = (data_contentGallowParkers != nil) ? UIImage(data: data_contentGallowParkers!) : #imageLiteral(resourceName: "musicDefault")
         let image_content_nZk = (data_content_nZk != nil) ? UIImage(data: data_content_nZk!) : #imageLiteral(resourceName: "musicDefault")
         
+        print("CPMaximumNumberOfGridImages: \(CPMaximumNumberOfGridImages)")
+        
         let row_contentGallowTooVirgin = CPListImageRowItem(text: "Gallow: To Virgint!!", images: [ image_contentGallowTooVirgin ?? #imageLiteral(resourceName: "musicDefault") , image_contentGallowTooVirgin ?? #imageLiteral(resourceName: "musicDefault")])
         row_contentGallowTooVirgin.handler = { item,completion in
             self.carplayInterfaceController?.pushTemplate(self.dispaly_listSong(music: Repo.gallow_TooVirginAlbum, name: "Gallow: To Virgint!!", image: image_contentGallowTooVirgin), animated: true, completion: nil)
+            completion()
+        }
+        row_contentGallowTooVirgin.listImageRowHandler = { item,index,completion in
+            print("row_contentGallowTooVirgin item: \(item) , index: \(index)")
             completion()
         }
         
@@ -159,10 +165,18 @@ extension TemplateManager {
             self.carplayInterfaceController?.pushTemplate(self.dispaly_listSong(music: Repo.gallow_ParkestAlbum, name: "Gallow: Parkers", image: image_contentGallowParkers), animated: true, completion: nil)
             completion()
         }
+        row_contentGallowParkers.listImageRowHandler = { item,index,completion in
+            print("row_contentGallowParkers item: \(item) , index: \(index)")
+            completion()
+        }
         
         let row_content_nZk = CPListImageRowItem(text: "SawanoHiroyuki[nZk]: BEST OF VOCAL WORKS [nZk] 2", images: [image_content_nZk ?? #imageLiteral(resourceName: "musicDefault") ,image_content_nZk ?? #imageLiteral(resourceName: "musicDefault")])
         row_content_nZk.handler = { item,completion in
             self.carplayInterfaceController?.pushTemplate(self.dispaly_listSong(music: Repo.nZk_BestOfVocalWorks2Album, name: "SawanoHiroyuki[nZk]: BEST OF VOCAL WORKS [nZk] 2", image: image_content_nZk), animated: true, completion: nil)
+            completion()
+        }
+        row_content_nZk.listImageRowHandler = { item,index,completion in
+            print("row_content_nZk item: \(item) , index: \(index)")
             completion()
         }
         
