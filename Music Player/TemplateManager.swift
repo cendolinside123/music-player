@@ -210,7 +210,7 @@ extension TemplateManager {
 
         }
         
-        let playlistTemp = CPListTemplate(title: name, sections: [CPListSection(items: listItems)])
+        let playlistTemp = CPListTemplate(title: name, sections: [CPListSection(items: listItems, header: "List", sectionIndexTitle: "")])
         //playlistTemp.tabImage = #imageLiteral(resourceName: "home")
         print("CPListTemplate.maximumItemCount: \(CPListTemplate.maximumItemCount)")
         print("CPListTemplate.maximumSectionCount: \(CPListTemplate.maximumSectionCount)")
