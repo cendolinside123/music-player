@@ -52,11 +52,15 @@ class TemplateManager: NSObject {
             
         })
         
-        let more2 = CPNowPlayingMoreButton(handler: { _ in
+        let imageButton2 = CPNowPlayingImageButton(image: #imageLiteral(resourceName: "musicDefault"), handler: { _ in
             
         })
         
-        nowPlaying.updateNowPlayingButtons([rate,more,shuffle,repeatButton,imageButton,addLibrary,more2])
+        nowPlaying.updateNowPlayingButtons([imageButton,more,shuffle,repeatButton,imageButton2])
+        nowPlaying.isAlbumArtistButtonEnabled = true
+        nowPlaying.isUpNextButtonEnabled = true
+        nowPlaying.upNextTitle = "Next"
+        
         
         var tabTemplates = [CPTemplate]()
         
@@ -67,6 +71,7 @@ class TemplateManager: NSObject {
 //            // Fallback on earlier versions
 //        }
         tabTemplates.append(self.displayHome())
+        tabTemplates.append(self.templateGrid())
         
         self.carplayInterfaceController!.delegate = self
         if #available(iOS 14.0, *) {
@@ -117,22 +122,6 @@ extension TemplateManager {
         list += Repo.nZk_BestOfVocalWorks2Album
         list += Repo.gallow_ParkestAlbum
         list += Repo.gallow_TooVirginAlbum
-        
-//        for song in list {
-//
-//            let aSong = CPListItem(text: song.title, detailText: song.artist)
-//            aSong.handler = { item,completion in
-//                MusicPlayer.sharedInstance.stop()
-//                MusicPlayer.sharedInstance.getInfo(music: song)
-//                MusicPlayer.sharedInstance.setSong(url: song.url)
-//                MusicPlayer.sharedInstance.play()
-//                self.carplayInterfaceController?.pushTemplate(CPNowPlayingTemplate.shared, animated: true, completion: nil)
-//                completion()
-//            }
-//
-//            listItems.append(aSong)
-//
-//        }
         
         let url_contentGallowTooVirgin = URL(string: "https://images-na.ssl-images-amazon.com/images/I/71TP7B9ta0L._SX522_.jpg")
         let url_contentGallowParkers = URL(string: "https://i1.sndcdn.com/artworks-000513975783-35fqbz-t500x500.jpg")
@@ -185,11 +174,56 @@ extension TemplateManager {
         listItems.append(row_content_nZk)
         
         
-        let playlistTemp = CPListTemplate(title: "Home", sections: [CPListSection(items: listItems)])
+        let playlistTemp = CPListTemplate(title: "Home", sections: [CPListSection(items: listItems, header: "Music", sectionIndexTitle: ""),dummySection()])
         playlistTemp.tabImage = #imageLiteral(resourceName: "home")
         print("CPListTemplate.maximumItemCount: \(CPListTemplate.maximumItemCount)")
         print("CPListTemplate.maximumSectionCount: \(CPListTemplate.maximumSectionCount)")
         return playlistTemp
+    }
+    
+    private func dummySection() -> CPListSection {
+        var listItems = [CPListTemplateItem]()
+        
+        let itemDumy = CPListItem(text: "ini alert", detailText: "show alert")
+        itemDumy.handler = { item, completion in
+            
+            
+            self.showActionSheet()
+            completion()
+        }
+        
+        
+        
+        listItems.append(itemDumy)
+        
+        return CPListSection(items: listItems, header: "Dummy 1", sectionIndexTitle: "")
+    }
+    
+    func showActionSheet() {
+        var actions = [CPAlertAction]()
+
+        actions.append(CPAlertAction(title: "Action 1 show now playing", style: .default, handler: { _ in
+            self.carplayInterfaceController?.pushTemplate(CPNowPlayingTemplate.shared, animated: true, completion: nil)
+        }))
+        
+        actions.append(CPAlertAction(title: "Action 2", style: .default, handler: { _ in
+            print("ini action 2")
+        }))
+        
+        
+        actions.append(CPAlertAction(title: "Cancel", style: .cancel, handler: { _ in
+            self.carplayInterfaceController?.dismissTemplate(animated: true, completion: { (success, error) in
+                debugPrint("Template was dismissed!")
+            })
+        }))
+        
+        print("CPAlertTemplate.maximumActionCount : \(CPAlertTemplate.maximumActionCount)")
+        
+        let alert = CPAlertTemplate(titleVariants: ["ini alert","test"], actions: actions)
+        
+
+        //let template = CPActionSheetTemplate(title: "Select action", message: "Any action will do", actions: actions)
+        self.carplayInterfaceController?.presentTemplate(alert, animated: true, completion: nil)
     }
     
     
@@ -215,6 +249,44 @@ extension TemplateManager {
         print("CPListTemplate.maximumItemCount: \(CPListTemplate.maximumItemCount)")
         print("CPListTemplate.maximumSectionCount: \(CPListTemplate.maximumSectionCount)")
         return playlistTemp
+        
+    }
+    
+    private func templateGrid() -> CPGridTemplate {
+        //icon <div>Icons made by <a href="https://www.flaticon.com/authors/pixel-perfect" title="Pixel perfect">Pixel perfect</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></div>
+        
+        
+        let pop = CPGridButton(titleVariants: ["Pop"], image: #imageLiteral(resourceName: "pop"), handler: { handler in
+            print("ini pop")
+            
+        })
+        pop.isEnabled = true
+        
+        let rock = CPGridButton(titleVariants: ["Rock"], image: #imageLiteral(resourceName: "pop"), handler: { handler in
+            print("ini rock")
+        })
+        rock.isEnabled = true
+        
+        let podcast = CPGridButton(titleVariants: ["Podcast"], image: #imageLiteral(resourceName: "pop"), handler: { handler in
+            print("ini podcast")
+        })
+        podcast.isEnabled = true
+        
+        let idol = CPGridButton(titleVariants: ["Idol"], image: #imageLiteral(resourceName: "pop"), handler: { handler in
+            print("ini idol")
+        })
+        idol.isEnabled = true
+        
+        let dangdut = CPGridButton(titleVariants: ["Dangdut"], image: #imageLiteral(resourceName: "pop"), handler: { handler in
+            print("ini dangdut")
+        })
+        dangdut.isEnabled = true
+        
+        let grid = CPGridTemplate(title: "Genre", gridButtons: [pop,rock,podcast,idol,dangdut])
+        grid.tabImage = #imageLiteral(resourceName: "musicDefault")
+        
+        
+        return grid
         
     }
     
