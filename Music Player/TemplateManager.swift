@@ -60,6 +60,7 @@ class TemplateManager: NSObject {
         nowPlaying.isAlbumArtistButtonEnabled = true
         nowPlaying.isUpNextButtonEnabled = true
         nowPlaying.upNextTitle = "Next"
+        nowPlaying.add(self)
         
         
         var tabTemplates = [CPTemplate]()
@@ -290,4 +291,10 @@ extension TemplateManager {
         
     }
     
+}
+
+extension TemplateManager: CPNowPlayingTemplateObserver {
+    func nowPlayingTemplateUpNextButtonTapped(_ nowPlayingTemplate: CPNowPlayingTemplate) {
+        print("Show Queue")
+    }
 }
