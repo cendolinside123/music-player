@@ -28,6 +28,11 @@ class MediaCommandCenter: NSObject {
         nowMediaPlayerInfoCenter = MPNowPlayingInfoCenter.default().self
         super.init()
         setupControlCenter()
+//        #if targetEnvironment(simulator)
+//            UIApplication.shared.endReceivingRemoteControlEvents()
+//            UIApplication.shared.beginReceivingRemoteControlEvents()
+//        #endif
+        
     }
     
     private func setupControlCenter() {
@@ -51,6 +56,15 @@ class MediaCommandCenter: NSObject {
             self?.delegate?.didTogglePlayPause()
             return .success
         }
+        
+        controlCenter.likeCommand.addTarget(handler: { event in
+            return .success
+        })
+        
+        controlCenter.changePlaybackRateCommand.addTarget(handler: { event in
+            return .success
+        })
+        
     }
 }
 
