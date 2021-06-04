@@ -45,6 +45,12 @@ extension SearchRequestHandler {
     func resolveMediaItems(for intent: INPlayMediaIntent, with completion: @escaping ([INPlayMediaMediaItemResolutionResult]) -> Void) {
         print("\(intent.mediaSearch?.mediaName)")
         
+        
+        MusicPlayer.sharedInstance.stop()
+        MusicPlayer.sharedInstance.getInfo(music: Repo.gallow_ParkestAlbum[1])
+        MusicPlayer.sharedInstance.setSong(url: Repo.gallow_ParkestAlbum[1].url)
+        MusicPlayer.sharedInstance.play()
+        
         completion([INPlayMediaMediaItemResolutionResult.unsupported()])
     }
     
