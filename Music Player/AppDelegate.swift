@@ -11,22 +11,22 @@ import CoreData
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
-    var window: UIWindow?
-    lazy var coreData = CoreDataStack(modelName: "Music_Player")
+//    var window: UIWindow?
+//    lazy var coreData = CoreDataStack(modelName: "Music_Player")
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         
-        window = UIWindow()
-        
-        let homeVC = HomeViewController()
-        homeVC.addCoreDataStack(coreData: coreData)
-        let nav = UINavigationController(rootViewController: homeVC)
-        nav.isNavigationBarHidden = true
-        self.window?.rootViewController = nav
-        self.window?.makeKeyAndVisible()
-        
-        
+//        window = UIWindow()
+//
+//        let homeVC = HomeViewController()
+//        homeVC.addCoreDataStack(coreData: coreData)
+//        let nav = UINavigationController(rootViewController: homeVC)
+//        nav.isNavigationBarHidden = true
+//        self.window?.rootViewController = nav
+//        self.window?.makeKeyAndVisible()
+//
+//
         return true
     }
     
@@ -36,6 +36,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     func applicationDidEnterBackground(_ application: UIApplication) {
         print("app di background")
+    }
+    
+    func application(_ application: UIApplication, didDiscardSceneSessions sceneSessions: Set<UISceneSession>) {
+        
+    }
+    
+    func application(_ application: UIApplication, configurationForConnecting connectingSceneSession: UISceneSession, options: UIScene.ConnectionOptions) -> UISceneConfiguration {
+        UISceneConfiguration(name: "Default Configuration", sessionRole: connectingSceneSession.role)
     }
 
 //    // MARK: - Core Data stack
