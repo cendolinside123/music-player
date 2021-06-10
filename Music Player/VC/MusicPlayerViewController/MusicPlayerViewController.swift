@@ -188,8 +188,10 @@ class MusicPlayerViewController: UIViewController {
         nowPlayingInfo.translatesAutoresizingMaskIntoConstraints = false
         containerSongInfo.translatesAutoresizingMaskIntoConstraints = false
         containerSongDuration.translatesAutoresizingMaskIntoConstraints = false
+        
+        constraints += [NSLayoutConstraint(item: nowPlayingInfo, attribute: .height, relatedBy: .equal, toItem: nowPlayingInfo, attribute: .width, multiplier: 1, constant: 0)]
 
-        constraints += [NSLayoutConstraint(item: nowPlayingInfo, attribute: .height, relatedBy: .equal, toItem: view, attribute: .height, multiplier: 5/9, constant: 0)]
+        //constraints += [NSLayoutConstraint(item: nowPlayingInfo, attribute: .height, relatedBy: .equal, toItem: view, attribute: .height, multiplier: 5/9, constant: 0)]
         constraints += [NSLayoutConstraint(item: containerSongInfo, attribute: .height, relatedBy: .equal, toItem: view, attribute: .height, multiplier: 1/9, constant: 0)]
         constraints += [NSLayoutConstraint(item: containerSongDuration, attribute: .height, relatedBy: .equal, toItem: nil, attribute: .notAnAttribute, multiplier: 1, constant: 16)]
         
