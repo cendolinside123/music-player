@@ -17,7 +17,7 @@ class HomeViewController: UIViewController {
         return DeviceType.current.isIphoneXClass ? 125 : 100
     }
     
-    private let navigationBar = UIView()
+    private let navigationBar = NavigationBar()
     private let scrollView = UIScrollView()
     private let homeStackView:UIStackView = {
         let stack = UIStackView()
@@ -223,7 +223,7 @@ class HomeViewController: UIViewController {
         
     }
     private func addNavigationBar() {
-        navigationBar.backgroundColor = .blue
+        //navigationBar.backgroundColor = .blue
         view.addSubview(navigationBar)
     }
     
