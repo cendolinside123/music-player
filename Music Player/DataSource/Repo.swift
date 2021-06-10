@@ -52,6 +52,22 @@ struct Repo {
          Music(id: 18, title: "theDOGS", artist: "SawanoHiroyuki[nZk]", album: "BEST OF VOCAL WORKS [nZk] 2", url: "https://firebasestorage.googleapis.com/v0/b/learn-da01a.appspot.com/o/nZk%2FBEST%20OF%20VOCAL%20WORKS%20%5BnZk%5D%202%2F18%20theDOGS%20.mp3?alt=media")
     ]
     
+    static let artistInfo:[(name:String,detail:String)] = [
+        (name: "GALLOW",detail: """
+    GALLOW is essentially a revamp of Pesela-Quesela-In, Hidaka’s side project with thai (ex-BEAT CRUSADERS) that released one album in 2002.  That same year GALLOW formed.  Likewise, GALLOW has had a rotating cast of current and past BEAT CRUSADERS members, most notably kato and Yukio Iwahara.  Their first album Parkest! was released in 2006 and kato left the year after that.  Their next album Too Virgin!! was released in 2008 and Iwahara left the year after that.  GALLOW is yet again Hidaka’s solo project.
+                                                            
+    Hidaka describes his music as a \"mixture of black music & white music with Asian feelings.\"  As lame as that sounds, I do feel a heavy influence of 60s and 70s pop music.  Although sometimes GALLOW really does just sound like an acoustic version of BEAT CRUSADERS, even using the exact same electronic horns and whistles in some of their songs.  GALLOW is at its best when Hidaka shuts up and gives Iwahara the limelight
+ """) ,
+        (name: "GALLOW",detail: """
+    GALLOW is essentially a revamp of Pesela-Quesela-In, Hidaka’s side project with thai (ex-BEAT CRUSADERS) that released one album in 2002.  That same year GALLOW formed.  Likewise, GALLOW has had a rotating cast of current and past BEAT CRUSADERS members, most notably kato and Yukio Iwahara.  Their first album Parkest! was released in 2006 and kato left the year after that.  Their next album Too Virgin!! was released in 2008 and Iwahara left the year after that.  GALLOW is yet again Hidaka’s solo project.
+                                                            
+    Hidaka describes his music as a \"mixture of black music & white music with Asian feelings.\"  As lame as that sounds, I do feel a heavy influence of 60s and 70s pop music.  Although sometimes GALLOW really does just sound like an acoustic version of BEAT CRUSADERS, even using the exact same electronic horns and whistles in some of their songs.  GALLOW is at its best when Hidaka shuts up and gives Iwahara the limelight
+ """) , (name: "SawanoHiroyuki[nZk]",detail: """
+ Hiroyuki Sawano (澤野 弘之, Sawano Hiroyuki, born September 12, 1980) is a Japanese composer, arranger, musician, lyricist and pianist best known for his work on many anime series, television dramas, and films. His works include the musical scores for Attack on Titan, Blue Exorcist, Kill la Kill, Mobile Suit Gundam Unicorn, Aldnoah.Zero and The Seven Deadly Sins. He was represented by Legendoor between 2006 and 2017, and is currently represented by VV-ALKLINE. In 2014, he started a new vocal project under the name ''SawanoHiroyuki[nZk]''. His pieces tend to have exceedingly strange titles, featuring symbols and letters from various different alphabets.Sawano cited Joe Hisaishi, Yoko Kanno, Danny Elfman, and Hans Zimmer as major inspirations.
+ """)
+        
+    ]
+    
 }
 
 struct QueueTemp {
