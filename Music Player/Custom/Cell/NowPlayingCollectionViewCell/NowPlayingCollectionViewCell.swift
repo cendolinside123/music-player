@@ -31,9 +31,6 @@ class NowPlayingCollectionViewCell: UICollectionViewCell {
         let rotate = UIRotationGestureRecognizer(target: self, action: #selector(rotateImage))
         rotate.delegate = self
         
-        //let touch = UIGestureRecognizer(target: self, action: #selector(imageTouch))
-        
-        //imageView.addGestureRecognizer(touch)
         imageView.addGestureRecognizer(rotate)
         imageView.isUserInteractionEnabled = true
         
@@ -96,12 +93,6 @@ class NowPlayingCollectionViewCell: UICollectionViewCell {
         constraints += NSLayoutConstraint.constraints(withVisualFormat: vImageView, options: .alignAllLeading, metrics: metrix, views: views)
         
         //MARK: circleInside constraints
-//        circleInside.translatesAutoresizingMaskIntoConstraints = false
-//        let hCircleInside = "H:|-99-[circleInside]-99-|"
-//        let vCircleInside = "V:|-100-[circleInside]-100-|"
-//
-//        constraints += NSLayoutConstraint.constraints(withVisualFormat: hCircleInside, options: .alignAllTop, metrics: metrix, views: views)
-//        constraints += NSLayoutConstraint.constraints(withVisualFormat: vCircleInside, options: .alignAllLeading, metrics: metrix, views: views)
         
         NSLayoutConstraint.activate(constraints)
     }

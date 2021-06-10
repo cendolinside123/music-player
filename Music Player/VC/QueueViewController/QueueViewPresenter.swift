@@ -31,31 +31,11 @@ class QueueViewPresenter:NSObject {
         self.view?.getTable().allowsMultipleSelection = false
         queue = Queue(coreData: (self.view?.returnCoreDataStack())!)
         musicPlayerCoreData = CoreDataMusic()
-//        queue?.getPlayedSong(result: { music in
-//            self.nowPlaying = music
-//            self.doReload?()
-//        })
-//
-//        queue?.getQueue(result: { listMusic in
-//            var temp = listMusic
-//            temp.remove(at: 0)
-//            self.listQueue = temp
-//            self.doReload?()
-//        })
-        
         
         self.nowPlaying = QueueTemp.queue[0]
         var temp = QueueTemp.queue
         temp.remove(at: 0)
         self.listQueue = temp
-        
-//        doReload = {
-//            if self.nowPlaying != nil && self.listQueue.count != 0 {
-//                DispatchQueue.main.async {
-//                    self.view?.getTable().reloadData()
-//                }
-//            }
-//        }
         
         
     }

@@ -64,13 +64,7 @@ extension MusicPlayerViewPresenter:UICollectionViewDelegate,UICollectionViewData
             return UICollectionViewCell()
         }
         
-        //print("listOfMusic item :\(listOfMusic[indexPath.row].title) , index: \(indexPath.row)")
-        
         cell.setImage(image: UserDefaults.standard.string(forKey: "nowPlayingImage") ?? "")
-        //currentItemIndex = indexPath.item
-        //self.view?.setSongInfo(music: listOfMusic[indexPath.row])
-        
-        //self.view?.getNowPlaying().scrollToItem(at: indexPath, at: .centeredHorizontally, animated: true)
         
         cell.doPrepareRotate = { [weak self] in
             self?.pause()
