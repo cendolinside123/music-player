@@ -15,6 +15,8 @@ class QueueViewController: UIViewController {
     
     private var coreDataStack: CoreDataStack? = nil
     private var presenter: QueueViewPresenter? = nil
+    
+    var getClickedSong: ((Music) -> ())? = nil
 
     override func viewDidLoad() {
         super.viewDidLoad()

@@ -187,6 +187,29 @@ extension MusicPlayerViewPresenter {
 }
 
 extension MusicPlayerViewPresenter: MusicPlayerViewPresenterRule {
+    
+    func moveToSelectedQueue(song:Music) {
+        url = song.url
+        
+        
+        let getIndex = listOfMusic.firstIndex(where: { $0.title == song.title })!
+        
+        self.view?.getNowPlaying().scrollToItem(at: IndexPath(item: getIndex, section: 0), at: .centeredHorizontally, animated: true)
+        self.currentIndex = getIndex
+        self.view?.setSongInfo(music: listOfMusic[getIndex])
+        self.view?.doUpdateQueue?()
+        
+        MusicPlayer.sharedInstance.stop()
+        MusicPlayer.sharedInstance.getInfo(music: song)
+        MusicPlayer.sharedInstance.setSong(url: url)
+        
+        DispatchQueue.main.asyncAfter(deadline: .now() + 3, execute: {
+            MusicPlayer.sharedInstance.play()
+        })
+        
+    }
+    
+    
     func moveNextQueue() {
         let oldMusic = listOfMusic[currentIndex]
         

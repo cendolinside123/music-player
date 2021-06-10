@@ -21,4 +21,6 @@ protocol MusicPlayerViewPresenterRule {
     func minimizePanelMusicPlayer_withAnimation(frame:CGRect,duration:Double,isFinish:@escaping (Bool)->())
     func maximizePanelController(frame:CGRect,animated: Bool, duration: Double, completion: (() -> Void)?)
     func minimizePanelController(frame:CGRect,animated: Bool, duration: Double, completion: (() -> Void)?)
+    func moveToSelectedQueue(song:Music)
+    
 }

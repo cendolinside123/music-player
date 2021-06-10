@@ -99,6 +99,12 @@ class MusicPlayerViewController: UIViewController {
             let queue = QueueViewController()
             queue.modalPresentationStyle = .fullScreen
             queue.addCoreDataStack(coreData: self.coreDataStack!)
+            
+            queue.getClickedSong = { [weak self] song in
+                print("song name: \(song.title)")
+                self?.presenter?.moveToSelectedQueue(song: song)
+            }
+            
             self.view.window?.rootViewController?.present(queue, animated: true, completion: {
                 
             })
