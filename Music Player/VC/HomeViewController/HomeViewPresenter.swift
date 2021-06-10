@@ -14,6 +14,7 @@ class HomeViewPresenter {
     private var coreDataMusic: CoreDataMusicProtocol? = nil
     private var queue: Queue? = nil
     private var playWhenClicked: (() ->())? = nil
+    private var state: PlayerState  = .Stop
     
     init(view:HomeViewController) {
         self.view = view
@@ -27,6 +28,7 @@ class HomeViewPresenter {
         }
         
         MusicPlayer.sharedInstance.updateState = { [weak self] state in
+            self?.state = state
             if state == .Stop || state == .Pause {
                 self?.view?.viewInfo.getButton().setTitle("Play", for: .normal)
             } else{
@@ -34,6 +36,8 @@ class HomeViewPresenter {
             }
             
         }
+        
+        self.view?.viewInfo.getButton().addTarget(self, action: #selector(buttonPlayPause_viewInfoBar), for: .touchDown)
         
     }
     
@@ -137,6 +141,14 @@ extension HomeViewPresenter: HomeViewMusicPlayerPresenterRule {
             self.view?.viewInfo.getButton().setTitle("Play", for: .normal)
         } else{
             self.view?.viewInfo.getButton().setTitle("Pause", for: .normal)
+        }
+    }
+    
+    @objc private func buttonPlayPause_viewInfoBar() {
+        if state != .Stop{
+            MusicPlayer.sharedInstance.togglePlayPause()
+        } else {
+            playFromQueue()
         }
     }
     
