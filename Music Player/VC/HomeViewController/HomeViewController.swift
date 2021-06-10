@@ -17,8 +17,9 @@ class HomeViewController: UIViewController {
         return DeviceType.current.isIphoneXClass ? 125 : 100
     }
     
-    let scrollView = UIScrollView()
-    let homeStackView:UIStackView = {
+    private let navigationBar = UIView()
+    private let scrollView = UIScrollView()
+    private let homeStackView:UIStackView = {
         let stack = UIStackView()
         stack.axis = .vertical
         stack.distribution = .fill
@@ -30,13 +31,13 @@ class HomeViewController: UIViewController {
         return stack
     }()
     
-    let contentGallowParkers = SubContent()
-    let contentGallowTooVirgin = SubContent()
-    let content_nZk = SubContent()
+    private let contentGallowParkers = SubContent()
+    private let contentGallowTooVirgin = SubContent()
+    private let content_nZk = SubContent()
     let viewInfo = ViewInfo()
-    let emptyView = UIView()
+    private let emptyView = UIView()
     
-    lazy var musicPlayerView:UIViewController = {
+    private lazy var musicPlayerView:UIViewController = {
         let musicVC = MusicPlayerViewController()
         
         if let dt = coreDataStack {
@@ -145,6 +146,7 @@ class HomeViewController: UIViewController {
     */
     
     private func addLayout() {
+        addNavigationBar()
         addScrollView()
         addContentGallowParkers()
         addContentGallowTooVirgin()
@@ -156,19 +158,23 @@ class HomeViewController: UIViewController {
     }
     
     private func addConstraints() {
-        let views = ["scrollView":scrollView,"homeStackView":homeStackView,"viewInfo":viewInfo]
+        let views = ["scrollView":scrollView,"homeStackView":homeStackView,"viewInfo":viewInfo,"navigationBar":navigationBar]
         let metrix:[String:Any] = ["view_width":self.view.frame.width]
         
         var constraints = [NSLayoutConstraint]()
         
-        //MARK: scrollView constraints
+        //MARK: scrollView & navigationBar constraints
         scrollView.translatesAutoresizingMaskIntoConstraints = false
-        
+        navigationBar.translatesAutoresizingMaskIntoConstraints = false
         let hScrollView = "H:|-0-[scrollView]-0-|"
-        let vScrollView = "V:|-0-[scrollView]-0-|"
+        let vScrollView = "V:|-[navigationBar]-0-[scrollView]-0-|"
         
+        let hNavigationBar = "H:|-0-[navigationBar]-0-|"
+        
+        constraints += NSLayoutConstraint.constraints(withVisualFormat: hNavigationBar, options: .alignAllTop, metrics: metrix, views: views)
         constraints += NSLayoutConstraint.constraints(withVisualFormat: hScrollView, options: .alignAllTop, metrics: metrix, views: views)
-        constraints += NSLayoutConstraint.constraints(withVisualFormat: vScrollView, options: .alignAllTop, metrics: metrix, views: views)
+        constraints += NSLayoutConstraint.constraints(withVisualFormat: vScrollView, options: .alignAllLeading, metrics: metrix, views: views)
+        constraints += [NSLayoutConstraint(item: navigationBar, attribute: .height, relatedBy: .equal, toItem: view, attribute: .height, multiplier: 0.8/9, constant: 0)]
         
         //MARK: homeStackView constraints
         homeStackView.translatesAutoresizingMaskIntoConstraints = false
@@ -177,7 +183,7 @@ class HomeViewController: UIViewController {
         let vHomeStackView = "V:|-30-[homeStackView]-0-|"
         
         constraints += NSLayoutConstraint.constraints(withVisualFormat: hHomeStackView, options: .alignAllTop, metrics: metrix, views: views)
-        constraints += NSLayoutConstraint.constraints(withVisualFormat: vHomeStackView, options: .alignAllTop, metrics: metrix, views: views)
+        constraints += NSLayoutConstraint.constraints(withVisualFormat: vHomeStackView, options: .alignAllLeading, metrics: metrix, views: views)
         constraints += [NSLayoutConstraint(item: homeStackView, attribute: .centerX, relatedBy: .equal, toItem: view, attribute: .centerX, multiplier: 1, constant: 0)]
         
         //MARK: contentGallowParkers , contentGallowTooVirgin , and content_nZk
@@ -215,6 +221,10 @@ class HomeViewController: UIViewController {
         
         NSLayoutConstraint.activate(constraints)
         
+    }
+    private func addNavigationBar() {
+        navigationBar.backgroundColor = .blue
+        view.addSubview(navigationBar)
     }
     
     private func addScrollView() {
