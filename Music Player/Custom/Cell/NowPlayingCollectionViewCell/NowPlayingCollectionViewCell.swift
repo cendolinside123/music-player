@@ -123,11 +123,11 @@ class NowPlayingCollectionViewCell: UICollectionViewCell {
     
     private func createEmptyHole() {
         
-        let circlePath_inner1 = UIBezierPath(arcCenter: CGPoint(x: imageView.bounds.width / 2, y: imageView.bounds.width / 2), radius: CGFloat(imageView.bounds.width / 8), startAngle: CGFloat(0), endAngle: CGFloat(Double.pi * 2), clockwise: true)
+        let circlePath_inner1 = UIBezierPath(arcCenter: CGPoint(x: imageView.bounds.width / 2, y: imageView.bounds.height / 2), radius: CGFloat(imageView.bounds.width / 8), startAngle: CGFloat(0), endAngle: CGFloat(Double.pi * 2), clockwise: true)
         
-        let circlePath_inner2 = UIBezierPath(arcCenter: CGPoint(x: imageView.bounds.width / 2, y: imageView.bounds.width / 2), radius: CGFloat(imageView.bounds.width / 16), startAngle: CGFloat(0), endAngle: CGFloat(Double.pi * 2), clockwise: true)
+        let circlePath_inner2 = UIBezierPath(arcCenter: CGPoint(x: imageView.bounds.width / 2, y: imageView.bounds.height / 2), radius: CGFloat(imageView.bounds.width / 16), startAngle: CGFloat(0), endAngle: CGFloat(Double.pi * 2), clockwise: true)
         
-        let circlePath_core = UIBezierPath(arcCenter: CGPoint(x: imageView.bounds.width / 2, y: imageView.bounds.width / 2), radius: CGFloat(imageView.bounds.width / 30), startAngle: CGFloat(0), endAngle: CGFloat(Double.pi * 2), clockwise: true)
+        let circlePath_core = UIBezierPath(arcCenter: CGPoint(x: imageView.bounds.width / 2, y: imageView.bounds.height / 2), radius: CGFloat(imageView.bounds.width / 30), startAngle: CGFloat(0), endAngle: CGFloat(Double.pi * 2), clockwise: true)
         
         
         let shapeLayer_core = CAShapeLayer()
@@ -152,7 +152,7 @@ class NowPlayingCollectionViewCell: UICollectionViewCell {
         
         
         
-        let circlePath = UIBezierPath(arcCenter: CGPoint(x: imageView.bounds.width / 2, y: imageView.bounds.width / 2), radius: CGFloat(imageView.bounds.width / 6), startAngle: CGFloat(0), endAngle: CGFloat(Double.pi * 2), clockwise: true)
+        let circlePath = UIBezierPath(arcCenter: CGPoint(x: imageView.bounds.width / 2, y: imageView.bounds.height / 2), radius: CGFloat(imageView.bounds.width / 6), startAngle: CGFloat(0), endAngle: CGFloat(Double.pi * 2), clockwise: true)
             
         let shapeLayer = CAShapeLayer()
         shapeLayer.path = circlePath.cgPath
