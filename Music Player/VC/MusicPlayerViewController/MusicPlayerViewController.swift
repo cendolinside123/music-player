@@ -335,20 +335,6 @@ extension MusicPlayerViewController: MusicPlayerViewControllerPanelProtocol {
         presenter?.minimizePanelController(frame: frame, animated: animated, duration: duration, completion: {
             completions?()
         })
-        
-//        if animated {
-//            minimizePanelMusicPlayer_withAnimation(frame: frame, duration: duration, isFinish: { isFinished in
-//                guard isFinished else {
-//                    return
-//                }
-//                self.setPanelState(state: .isMinimize)
-//                completion?()
-//            })
-//        } else {
-//            setMinimizePanel(frame: frame)
-//            self.setPanelState(state: .isMinimize)
-//            completion?()
-//        }
     }
     
     func closePanelController(animated: Bool, completion: (() -> Void)?) {
@@ -488,13 +474,6 @@ extension MusicPlayerViewController {
     }
     
     @objc private func checkValue(slider: UISlider) {
-//        if lastSliderValue < slider.value {
-//            print("slider increase")
-//        } else if lastSliderValue == slider.value {
-//            print("slider equal")
-//        } else {
-//            print("slider decrease")
-//        }
         
         self.presenter?.rotateWhenSeek(oldValue: lastSliderValue, newValue: slider.value)
         
