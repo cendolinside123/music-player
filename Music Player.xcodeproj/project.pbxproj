@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		0427EA3F26294A7100F48CC6 /* QueueViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0427EA3E26294A7100F48CC6 /* QueueViewController.swift */; };
+		04365DFD26726D1700B023CF /* AboutMeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04365DFC26726D1700B023CF /* AboutMeViewController.swift */; };
 		0448E592261FFB6300789E6D /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0448E591261FFB6300789E6D /* HomeViewController.swift */; };
 		0448E595261FFB7900789E6D /* MusicPlayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0448E594261FFB7900789E6D /* MusicPlayerViewController.swift */; };
 		044EEEB62652B22700982488 /* Entitlements.plist in Resources */ = {isa = PBXBuildFile; fileRef = 044EEEB52652B22700982488 /* Entitlements.plist */; };
@@ -61,6 +62,7 @@
 
 /* Begin PBXFileReference section */
 		0427EA3E26294A7100F48CC6 /* QueueViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QueueViewController.swift; sourceTree = "<group>"; };
+		04365DFC26726D1700B023CF /* AboutMeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutMeViewController.swift; sourceTree = "<group>"; };
 		0448E591261FFB6300789E6D /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		0448E594261FFB7900789E6D /* MusicPlayerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicPlayerViewController.swift; sourceTree = "<group>"; };
 		044EEEB52652B22700982488 /* Entitlements.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Entitlements.plist; sourceTree = "<group>"; };
@@ -129,9 +131,18 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		04365DFB26726CF400B023CF /* AboutMeViewController */ = {
+			isa = PBXGroup;
+			children = (
+				04365DFC26726D1700B023CF /* AboutMeViewController.swift */,
+			);
+			path = AboutMeViewController;
+			sourceTree = "<group>";
+		};
 		0448E590261FFB3B00789E6D /* VC */ = {
 			isa = PBXGroup;
 			children = (
+				04365DFB26726CF400B023CF /* AboutMeViewController */,
 				04F5C82226725BE400EE3A2D /* ArtistInfoViewController */,
 				04AAECED26314CD000524ADC /* MusicPlayerViewController */,
 				049DEB11262FFFD400F04A43 /* QueueViewController */,
@@ -528,6 +539,7 @@
 				04AE61E026287F6600F9FD8E /* MusicPlayerConfiguration.swift in Sources */,
 				044F166B2625D77F0002C608 /* MusicPlayerRule.swift in Sources */,
 				047F01FD2624636100244514 /* Repo.swift in Sources */,
+				04365DFD26726D1700B023CF /* AboutMeViewController.swift in Sources */,
 				044EEEC52652BD0400982488 /* TemplateManager.swift in Sources */,
 				04AAECEF26314F3B00524ADC /* MusicPlayerViewPresenter.swift in Sources */,
 				047F022E26246F2A00244514 /* CoreDataMusicProtocol.swift in Sources */,
