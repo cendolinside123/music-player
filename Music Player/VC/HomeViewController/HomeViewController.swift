@@ -79,7 +79,7 @@ class HomeViewController: UIViewController {
         
         
         contentGallowParkers.clickedSong = { [weak self] listSong in
-            //print("title: \(selectedSong?.title) , artist: \(selectedSong?.artist)")
+            
             
             for lagu in listSong {
                 print("title: \(lagu.title) , artist: \(lagu.artist)")
@@ -88,26 +88,20 @@ class HomeViewController: UIViewController {
             self?.addToQueue(music: listSong)
             self?.setImage(image:self?.contentGallowParkers.getImageURL() ?? "")
             
-//            self?.updateConstraints_ViewInfo()
             self?.presenter?.updateViewInfo()
-//            (self?.musicPlayerView as? MusicPlayerViewController)?.doUpdate?()
         }
         
         contentGallowTooVirgin.clickedSong = { [weak self] listSong in
-            //print("title: \(selectedSong?.title) , artist: \(selectedSong?.artist)")
             for lagu in listSong {
                 print("title: \(lagu.title) , artist: \(lagu.artist)")
             }
             self?.addToQueue(music: listSong)
             self?.setImage(image:self?.contentGallowTooVirgin.getImageURL() ?? "")
             
-//            self?.updateConstraints_ViewInfo()
             self?.presenter?.updateViewInfo()
-//            (self?.musicPlayerView as? MusicPlayerViewController)?.doUpdate?()
         }
         
         content_nZk.clickedSong = { [weak self] listSong in
-            //print("title: \(selectedSong?.title) , artist: \(selectedSong?.artist)")
             for lagu in listSong {
                 print("title: \(lagu.title) , artist: \(lagu.artist)")
             }
@@ -115,9 +109,7 @@ class HomeViewController: UIViewController {
             self?.addToQueue(music: listSong)
             self?.setImage(image:self?.content_nZk.getImageURL() ?? "")
             
-            //self?.updateConstraints_ViewInfo()
             self?.presenter?.updateViewInfo()
-//            (self?.musicPlayerView as? MusicPlayerViewController)?.doUpdate?()
         }
         
         configureMusicPlayer()
@@ -135,12 +127,6 @@ class HomeViewController: UIViewController {
             self?.presenter?.updateQueue()
         }
         
-        
-        
-//        (musicPlayerView as? MusicPlayerViewController)?.doUpdate = { [weak self] in
-//            
-//            
-//        }
         
         updateSongInfo?()
         
@@ -216,11 +202,6 @@ class HomeViewController: UIViewController {
         var constraintBottom:NSLayoutConstraint? = nil
         var constraintEmptyView:NSLayoutConstraint? = nil
         
-//        if isAlreadyShow == false {
-//            constraintBottom = NSLayoutConstraint(item: viewInfo, attribute: .bottomMargin, relatedBy: .equal, toItem: view, attribute: .bottom, multiplier: 1, constant: (view.frame.height/9))
-//        } else {
-//            constraintBottom = NSLayoutConstraint(item: viewInfo, attribute: .bottomMargin, relatedBy: .equal, toItem: view, attribute: .bottom, multiplier: 1, constant: 0)
-//        }
         
         constraintBottom = self.presenter?.setupViewInfo(item: viewInfo)
         
@@ -261,14 +242,6 @@ class HomeViewController: UIViewController {
     }
     
     private func addEmptyView() {
-        //emptyView.isHidden = true
-        
-//        let isAlreadyShow = UserDefaults.standard.value(forKey: "viewInfo") as? Bool ?? false
-//        if isAlreadyShow == false {
-//            emptyView.isHidden = true
-//        } else {
-//            emptyView.isHidden = false
-//        }
         
         emptyView.isHidden = self.presenter!.setupEmptyView()
         
@@ -312,9 +285,6 @@ extension HomeViewController {
         constraints[viewInfo_constraintBottom!] = NSLayoutConstraint(item: viewInfo, attribute: .bottom, relatedBy: .equal, toItem: view, attribute: .bottom, multiplier: 1, constant: 0)
         constraints[viewInfo_constraintBottom!].identifier = "viewInfo_constraintBottom"
         
-//            constraints[constraintEmptyView_height!] = NSLayoutConstraint(item: emptyView, attribute: .height, relatedBy: .equal, toItem: view, attribute: .height, multiplier: 1/9, constant: 0)
-//            constraints[constraintEmptyView_height!].identifier = "constraintEmptyView_height"
-        
         
         emptyView.isHidden = false
         
@@ -354,18 +324,6 @@ extension HomeViewController {
     }
     
     private func addToQueue(music:[Music]) {
-//        coreDataStack?.doInBackground(managedContext: { [weak self] context in
-//            self?.coreDataMusic?.deleteAllSong(managedContext: context, success: {
-//                self?.coreDataMusic?.addAllSong(managedContext: context, musics: music, success: {
-//                    print("add queue success")
-//                    self?.updateSongInfo?()
-//                }, failed: {
-//                    print("add queue failed")
-//                })
-//            }, failed: {
-//                print("delete queue failed")
-//            })
-//        })
         
         self.presenter?.addQueue(music: music)
         
