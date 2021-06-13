@@ -66,6 +66,12 @@ class HomeViewController: UIViewController {
         
         addLayout()
         addConstraints()
+        
+        navigationBar.doAction = {
+            let displayDevAbout = AboutMeViewController()
+            self.navigationController?.pushViewController(displayDevAbout, animated: true)
+        }
+        
         contentGallowParkers.setContent(data: Repo.gallow_ParkestAlbum)
         contentGallowTooVirgin.setContent(data: Repo.gallow_TooVirginAlbum)
         content_nZk.setContent(data: Repo.nZk_BestOfVocalWorks2Album)

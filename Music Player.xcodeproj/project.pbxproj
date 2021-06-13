@@ -37,6 +37,7 @@
 		048223C2262F00D30033DCF2 /* Queue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 048223C1262F00D30033DCF2 /* Queue.swift */; };
 		048223C7262F05DE0033DCF2 /* HomeViewPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 048223C6262F05DE0033DCF2 /* HomeViewPresenter.swift */; };
 		048223CB262F05F70033DCF2 /* HomeViewPresenterRule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 048223CA262F05F70033DCF2 /* HomeViewPresenterRule.swift */; };
+		048FBF882675FB7800DB1CA0 /* NavBarPageDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 048FBF872675FB7800DB1CA0 /* NavBarPageDetail.swift */; };
 		049DEB132630000B00F04A43 /* QueueViewPresenterRule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049DEB122630000B00F04A43 /* QueueViewPresenterRule.swift */; };
 		049DEB172630001B00F04A43 /* QueueViewPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049DEB162630001B00F04A43 /* QueueViewPresenter.swift */; };
 		049DEB1C2630074F00F04A43 /* QueueTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049DEB1B2630074F00F04A43 /* QueueTableViewCell.swift */; };
@@ -91,6 +92,7 @@
 		048223C1262F00D30033DCF2 /* Queue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Queue.swift; sourceTree = "<group>"; };
 		048223C6262F05DE0033DCF2 /* HomeViewPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewPresenter.swift; sourceTree = "<group>"; };
 		048223CA262F05F70033DCF2 /* HomeViewPresenterRule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewPresenterRule.swift; sourceTree = "<group>"; };
+		048FBF872675FB7800DB1CA0 /* NavBarPageDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavBarPageDetail.swift; sourceTree = "<group>"; };
 		049DEB122630000B00F04A43 /* QueueViewPresenterRule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QueueViewPresenterRule.swift; sourceTree = "<group>"; };
 		049DEB162630001B00F04A43 /* QueueViewPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QueueViewPresenter.swift; sourceTree = "<group>"; };
 		049DEB1B2630074F00F04A43 /* QueueTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QueueTableViewCell.swift; sourceTree = "<group>"; };
@@ -376,6 +378,7 @@
 			isa = PBXGroup;
 			children = (
 				04F5C81F267248DD00EE3A2D /* NavigationBar.swift */,
+				048FBF872675FB7800DB1CA0 /* NavBarPageDetail.swift */,
 			);
 			path = TabBar;
 			sourceTree = "<group>";
@@ -566,6 +569,7 @@
 				048223CB262F05F70033DCF2 /* HomeViewPresenterRule.swift in Sources */,
 				04F5C820267248DD00EE3A2D /* NavigationBar.swift in Sources */,
 				047F01FA2624628B00244514 /* Music.swift in Sources */,
+				048FBF882675FB7800DB1CA0 /* NavBarPageDetail.swift in Sources */,
 				04D9EA93263195DD0053848D /* CustomFlowLayout.swift in Sources */,
 				04AE61E826288DE100F9FD8E /* TabBarPlayer.swift in Sources */,
 			);

@@ -1,13 +1,13 @@
 //
-//  NavigationBar.swift
+//  NavBarPageDetail.swift
 //  Music Player
 //
-//  Created by Mac on 10/06/21.
+//  Created by Mac on 13/06/21.
 //
 
 import UIKit
 
-class NavigationBar: UIView {
+class NavBarPageDetail: UIView {
 
     /*
     // Only override draw() if you perform custom drawing.
@@ -17,8 +17,10 @@ class NavigationBar: UIView {
     }
     */
     
+    
     private let background = UIView()
-    private let buttonAbout = UIButton()
+    private let buttonClose = UIButton()
+    private let labelTitle = UILabel()
     
     var doAction:(() -> ())? = nil
     
@@ -37,10 +39,11 @@ class NavigationBar: UIView {
     private func addLayout() {
         addBackground()
         addAboutButon()
+        addTitle()
     }
     
     private func addConstraints() {
-        let views:[String:Any] = ["background":background,"buttonAbout":buttonAbout]
+        let views:[String:Any] = ["background":background,"buttonAbout":buttonClose,"labelTitle":labelTitle]
         let metrix:[String:Any] = [:]
         
         var constraints = [NSLayoutConstraint]()
@@ -55,14 +58,16 @@ class NavigationBar: UIView {
         constraints += NSLayoutConstraint.constraints(withVisualFormat: vBackground, options: .alignAllLeading, metrics: metrix, views: views)
         
         
-        let hButtonAbout = "H:[buttonAbout]-10-|"
+        let hButtonAbout_title = "H:|-10-[buttonAbout]-5-[labelTitle]-10-|"
         let vButtonAbout = "V:|-1-[buttonAbout]-1-|"
+        let vTitle = "V:|-1-[buttonAbout]-1-|"
         
-        buttonAbout.translatesAutoresizingMaskIntoConstraints = false
+        buttonClose.translatesAutoresizingMaskIntoConstraints = false
         
-        constraints += NSLayoutConstraint.constraints(withVisualFormat: hButtonAbout, options: .alignAllTop, metrics: metrix, views: views)
-        constraints += NSLayoutConstraint.constraints(withVisualFormat: vButtonAbout, options: .alignAllTrailing, metrics: metrix, views: views)
-        constraints += [NSLayoutConstraint(item: buttonAbout, attribute: .width, relatedBy: .equal, toItem: self, attribute: .width, multiplier: 2/9, constant: 0)]
+        constraints += NSLayoutConstraint.constraints(withVisualFormat: hButtonAbout_title, options: .alignAllTop, metrics: metrix, views: views)
+        constraints += NSLayoutConstraint.constraints(withVisualFormat: vButtonAbout, options: .alignAllLeading, metrics: metrix, views: views)
+        constraints += NSLayoutConstraint.constraints(withVisualFormat: vTitle, options: .alignAllLeading, metrics: metrix, views: views)
+        constraints += [NSLayoutConstraint(item: buttonClose, attribute: .width, relatedBy: .equal, toItem: self, attribute: .width, multiplier: 2/9, constant: 0)]
         
         NSLayoutConstraint.activate(constraints)
         
@@ -74,15 +79,28 @@ class NavigationBar: UIView {
     }
     
     private func addAboutButon() {
-        buttonAbout.setTitle("About", for: .normal)
-        buttonAbout.setTitleColor(.black, for: .normal)
-        buttonAbout.addTarget(self, action: #selector(displayAboutDev), for: .touchDown)
-        background.addSubview(buttonAbout)
+        buttonClose.setTitle("Close", for: .normal)
+        buttonClose.setTitleColor(.black, for: .normal)
+        buttonClose.addTarget(self, action: #selector(displayAboutDev), for: .touchDown)
+        background.addSubview(buttonClose)
+    }
+    
+    private func addTitle() {
+        labelTitle.text = ""
+        background.addSubview(labelTitle)
     }
     
     @objc private func displayAboutDev() {
         doAction?()
     }
     
+    func setTextButtonClose(text:String) {
+        buttonClose.setTitle(text, for: .normal)
+    }
+    
+    
+    func addTite(text:String) {
+        labelTitle.text = text
+    }
 
 }
