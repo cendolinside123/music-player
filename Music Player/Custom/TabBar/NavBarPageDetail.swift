@@ -102,5 +102,9 @@ class NavBarPageDetail: UIView {
     func addTite(text:String) {
         labelTitle.text = text
     }
+    
+    func setButtonCloseText(text:String) {
+        buttonClose.setTitle(text, for: .normal)
+    }
 
 }
