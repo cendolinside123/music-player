@@ -26,6 +26,7 @@ class TabBarPlayer: UIView {
     
     var closeMusicPlayer: (() -> ())? = nil
     var showQueue: (() -> ())? = nil
+    var showMore: (() -> ())? = nil
 
     /*
     // Only override draw() if you perform custom drawing.
@@ -105,6 +106,7 @@ class TabBarPlayer: UIView {
     private func addButtonMore() {
         buttonMore.setTitleColor(.black, for: .normal)
         buttonMore.setTitle("More", for: .normal)
+        buttonMore.addTarget(self, action: #selector(doMore), for: .touchDown)
         self.addSubview(buttonMore)
     }
     
@@ -125,6 +127,10 @@ extension TabBarPlayer {
     
     @objc private func doOpenQueue() {
         self.showQueue?()
+    }
+    
+    @objc private func doMore() {
+        self.showMore?()
     }
     
 }

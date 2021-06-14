@@ -110,6 +110,27 @@ class MusicPlayerViewController: UIViewController {
             })
         }
         
+        tabBar.showMore = {
+            let artistInfo = ArtistInfoViewController()
+            artistInfo.setArtist(name: self.artistLabel.text ?? "")
+            artistInfo.modalPresentationStyle = .fullScreen
+            
+            let actionSheetControllerMore = UIAlertController(title: "More", message: "Please select task", preferredStyle: .actionSheet)
+            
+            let displayArtistDetail = UIAlertAction(title: "Artist Detail", style: .default, handler: {_ in
+                self.present(artistInfo, animated: true, completion: nil)
+            })
+            actionSheetControllerMore.addAction(displayArtistDetail)
+            
+            let cancel = UIAlertAction(title: "Cancel", style: .cancel, handler: {_ in
+                
+            })
+            actionSheetControllerMore.addAction(cancel)
+            
+            self.present(actionSheetControllerMore, animated: true, completion: nil)
+            
+            
+        }
         
     }
     
