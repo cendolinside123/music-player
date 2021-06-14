@@ -133,7 +133,16 @@ extension QueueViewPresenter:UITableViewDelegate,UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, estimatedHeightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 60
+        return 80
+    }
+    
+    func tableView(_ tableView: UITableView, didEndDisplaying cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "queueCell", for: indexPath) as? QueueTableViewCell else {
+            return
+        }
+        
+        cell.returnImageArtist_Property().kf.cancelDownloadTask()
+        
     }
     
 }
