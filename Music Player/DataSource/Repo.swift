@@ -53,12 +53,12 @@ struct Repo {
     ]
     
     static let artistInfo:[(name:String,detail:String)] = [
-        (name: "GALLOW",detail: """
+        (name: "Gallow",detail: """
     GALLOW is essentially a revamp of Pesela-Quesela-In, Hidaka’s side project with thai (ex-BEAT CRUSADERS) that released one album in 2002.  That same year GALLOW formed.  Likewise, GALLOW has had a rotating cast of current and past BEAT CRUSADERS members, most notably kato and Yukio Iwahara.  Their first album Parkest! was released in 2006 and kato left the year after that.  Their next album Too Virgin!! was released in 2008 and Iwahara left the year after that.  GALLOW is yet again Hidaka’s solo project.
                                                             
     Hidaka describes his music as a \"mixture of black music & white music with Asian feelings.\"  As lame as that sounds, I do feel a heavy influence of 60s and 70s pop music.  Although sometimes GALLOW really does just sound like an acoustic version of BEAT CRUSADERS, even using the exact same electronic horns and whistles in some of their songs.  GALLOW is at its best when Hidaka shuts up and gives Iwahara the limelight
  """) ,
-        (name: "GALLOW",detail: """
+        (name: "Gallow",detail: """
     GALLOW is essentially a revamp of Pesela-Quesela-In, Hidaka’s side project with thai (ex-BEAT CRUSADERS) that released one album in 2002.  That same year GALLOW formed.  Likewise, GALLOW has had a rotating cast of current and past BEAT CRUSADERS members, most notably kato and Yukio Iwahara.  Their first album Parkest! was released in 2006 and kato left the year after that.  Their next album Too Virgin!! was released in 2008 and Iwahara left the year after that.  GALLOW is yet again Hidaka’s solo project.
                                                             
     Hidaka describes his music as a \"mixture of black music & white music with Asian feelings.\"  As lame as that sounds, I do feel a heavy influence of 60s and 70s pop music.  Although sometimes GALLOW really does just sound like an acoustic version of BEAT CRUSADERS, even using the exact same electronic horns and whistles in some of their songs.  GALLOW is at its best when Hidaka shuts up and gives Iwahara the limelight
