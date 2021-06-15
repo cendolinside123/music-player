@@ -305,6 +305,9 @@ class MusicPlayerViewController: UIViewController {
         buttonRepeat.setTitle("Repeat", for: .normal)
         buttonRepeat.setTitleColor(.black, for: .normal)
         buttonRepeat.addTarget(self, action: #selector(toggleRepeat), for: .touchDown)
+        buttonRepeat.titleLabel?.numberOfLines = 0
+        buttonRepeat.titleLabel?.lineBreakMode = .byWordWrapping
+        
         view.addSubview(buttonRepeat)
     }
     
@@ -519,7 +522,7 @@ extension MusicPlayerViewController {
     }
     
     func setUnRepeat() {
-        self.buttonRepeat.setTitle("UnRepeat", for: .normal)
+        self.buttonRepeat.setTitle("Un Repeat", for: .normal)
     }
 }
 
