@@ -185,12 +185,13 @@ extension NowPlayingCollectionViewCell {
     
     @objc private func rotateImage(gesture: UIRotationGestureRecognizer) {
         
-        
+        print("putaran dipanggil")
         if gesture.state == .began {
             print("rotation - began")
             doPrepareRotate?()
             
         } else if gesture.state == .changed {
+            doPrepareRotate?()
             let rotate = (gesture.view?.transform)!.rotated(by: gesture.rotation)
             //print("rotation - gesture.rotation: \(gesture.rotation)")
             let aGesture = gesture.rotation

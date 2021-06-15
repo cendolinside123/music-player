@@ -15,6 +15,7 @@ protocol MusicPlayerViewPresenterRule {
     func playPause()
     func seek(value: Float)
     func pause()
+    func toggleRepeat()
     func rotateWhenSeek(oldValue:Float,newValue:Float)
     func closePanelMusicPlayer_WithAnimation(frame:CGRect,isFinish:@escaping (Bool)->())
     func maximizePanelMusicPlayer_withAnimation(frame:CGRect,duration:Double,isFinish: @escaping (Bool)->())

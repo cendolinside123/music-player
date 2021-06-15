@@ -34,7 +34,6 @@ class HomeViewPresenter {
             } else{
                 self?.view?.viewInfo.getButton().setTitle("Pause", for: .normal)
             }
-            
         }
         
         self.view?.viewInfo.getButton().addTarget(self, action: #selector(buttonPlayPause_viewInfoBar), for: .touchDown)
@@ -128,10 +127,13 @@ extension HomeViewPresenter: HomeViewMusicPlayerPresenterRule {
             }
             
             DispatchQueue.main.async {
-                MusicPlayer.sharedInstance.stop()
-                MusicPlayer.sharedInstance.getInfo(music: music)
-                MusicPlayer.sharedInstance.setSong(url: music.url)
-                MusicPlayer.sharedInstance.play()
+//                MusicPlayer.sharedInstance.stop()
+//                MusicPlayer.sharedInstance.getInfo(music: music)
+//                MusicPlayer.sharedInstance.setSong(url: music.url)
+//                MusicPlayer.sharedInstance.play()
+                MusicPlayerUtility.shared.setCurrentURL(url: music.url)
+                MusicPlayerUtility.shared.setup(getMusic: music)
+                MusicPlayerUtility.shared.play()
             }
         })
     }
@@ -146,7 +148,8 @@ extension HomeViewPresenter: HomeViewMusicPlayerPresenterRule {
     
     @objc private func buttonPlayPause_viewInfoBar() {
         if state != .Stop{
-            MusicPlayer.sharedInstance.togglePlayPause()
+//            MusicPlayer.sharedInstance.togglePlayPause()
+            MusicPlayerUtility.shared.togglePlayPause()
         } else {
             playFromQueue()
         }

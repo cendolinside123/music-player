@@ -47,6 +47,8 @@
 		04AE61E026287F6600F9FD8E /* MusicPlayerConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04AE61DF26287F6600F9FD8E /* MusicPlayerConfiguration.swift */; };
 		04AE61E32628827400F9FD8E /* DeviceType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04AE61E22628827400F9FD8E /* DeviceType.swift */; };
 		04AE61E826288DE100F9FD8E /* TabBarPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04AE61E726288DE100F9FD8E /* TabBarPlayer.swift */; };
+		04B48EC02677668C00B2BA54 /* MusicPlayerUtility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B48EBF2677668C00B2BA54 /* MusicPlayerUtility.swift */; };
+		04B48EC5267766B300B2BA54 /* MusicPlayerUtilityPresenterRule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B48EC4267766B300B2BA54 /* MusicPlayerUtilityPresenterRule.swift */; };
 		04D9EA93263195DD0053848D /* CustomFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D9EA92263195DD0053848D /* CustomFlowLayout.swift */; };
 		04EC8315261F0051004BC444 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04EC8314261F0051004BC444 /* AppDelegate.swift */; };
 		04EC8319261F0051004BC444 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04EC8318261F0051004BC444 /* ViewController.swift */; };
@@ -102,6 +104,8 @@
 		04AE61DF26287F6600F9FD8E /* MusicPlayerConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicPlayerConfiguration.swift; sourceTree = "<group>"; };
 		04AE61E22628827400F9FD8E /* DeviceType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceType.swift; sourceTree = "<group>"; };
 		04AE61E726288DE100F9FD8E /* TabBarPlayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarPlayer.swift; sourceTree = "<group>"; };
+		04B48EBF2677668C00B2BA54 /* MusicPlayerUtility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicPlayerUtility.swift; sourceTree = "<group>"; };
+		04B48EC4267766B300B2BA54 /* MusicPlayerUtilityPresenterRule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicPlayerUtilityPresenterRule.swift; sourceTree = "<group>"; };
 		04D9EA92263195DD0053848D /* CustomFlowLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomFlowLayout.swift; sourceTree = "<group>"; };
 		04EC8311261F0051004BC444 /* Music Player.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Music Player.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		04EC8314261F0051004BC444 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -332,6 +336,23 @@
 			path = MusicPlayer;
 			sourceTree = "<group>";
 		};
+		04B48EBE2677661D00B2BA54 /* Utility */ = {
+			isa = PBXGroup;
+			children = (
+				04B48EC3267766A000B2BA54 /* Music */,
+			);
+			path = Utility;
+			sourceTree = "<group>";
+		};
+		04B48EC3267766A000B2BA54 /* Music */ = {
+			isa = PBXGroup;
+			children = (
+				04B48EBF2677668C00B2BA54 /* MusicPlayerUtility.swift */,
+				04B48EC4267766B300B2BA54 /* MusicPlayerUtilityPresenterRule.swift */,
+			);
+			path = Music;
+			sourceTree = "<group>";
+		};
 		04EC8308261F0051004BC444 = {
 			isa = PBXGroup;
 			children = (
@@ -353,6 +374,7 @@
 		04EC8313261F0051004BC444 /* Music Player */ = {
 			isa = PBXGroup;
 			children = (
+				04B48EBE2677661D00B2BA54 /* Utility */,
 				044EEEB52652B22700982488 /* Entitlements.plist */,
 				044F16592625D6480002C608 /* Engine */,
 				047F022726246C4300244514 /* DataSource */,
@@ -551,6 +573,7 @@
 				04EC831F261F0051004BC444 /* Music_Player.xcdatamodeld in Sources */,
 				047F0245262479F700244514 /* Musics+CoreDataProperties.swift in Sources */,
 				048223C2262F00D30033DCF2 /* Queue.swift in Sources */,
+				04B48EC02677668C00B2BA54 /* MusicPlayerUtility.swift in Sources */,
 				047F023226246F3700244514 /* CoreDataMusic.swift in Sources */,
 				044F16532625A53A0002C608 /* SubContentData.swift in Sources */,
 				047F01F52624512B00244514 /* SubContent.swift in Sources */,
@@ -559,6 +582,7 @@
 				0469A86E26284DD600D62FEF /* ViewInfo.swift in Sources */,
 				04F5C82426725C5700EE3A2D /* ArtistInfoViewController.swift in Sources */,
 				04AAECF326314F4700524ADC /* MusicPlayerViewPresenterRule.swift in Sources */,
+				04B48EC5267766B300B2BA54 /* MusicPlayerUtilityPresenterRule.swift in Sources */,
 				048223C7262F05DE0033DCF2 /* HomeViewPresenter.swift in Sources */,
 				0448E592261FFB6300789E6D /* HomeViewController.swift in Sources */,
 				0427EA3F26294A7100F48CC6 /* QueueViewController.swift in Sources */,

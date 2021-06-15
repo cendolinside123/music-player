@@ -234,10 +234,13 @@ extension TemplateManager {
         for song in music {
             let aSong = CPListItem(text: song.title, detailText: song.artist, image: image)
             aSong.handler = { item,completion in
-                MusicPlayer.sharedInstance.stop()
-                MusicPlayer.sharedInstance.getInfo(music: song)
-                MusicPlayer.sharedInstance.setSong(url: song.url)
-                MusicPlayer.sharedInstance.play()
+//                MusicPlayer.sharedInstance.stop()
+//                MusicPlayer.sharedInstance.getInfo(music: song)
+//                MusicPlayer.sharedInstance.setSong(url: song.url)
+//                MusicPlayer.sharedInstance.play()
+                MusicPlayerUtility.shared.setCurrentURL(url: song.url)
+                MusicPlayerUtility.shared.setup(getMusic: song)
+                MusicPlayerUtility.shared.play()
                 self.carplayInterfaceController?.pushTemplate(CPNowPlayingTemplate.shared, animated: true, completion: nil)
                 completion()
             }

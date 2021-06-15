@@ -304,6 +304,7 @@ class MusicPlayerViewController: UIViewController {
     private func addButtonRepeat() {
         buttonRepeat.setTitle("Repeat", for: .normal)
         buttonRepeat.setTitleColor(.black, for: .normal)
+        buttonRepeat.addTarget(self, action: #selector(toggleRepeat), for: .touchDown)
         view.addSubview(buttonRepeat)
     }
     
@@ -509,5 +510,16 @@ extension MusicPlayerViewController {
         lastSliderValue = slider.value
     }
     
+    @objc private func toggleRepeat() {
+        self.presenter?.toggleRepeat()
+    }
+    
+    func setRepeat() {
+        self.buttonRepeat.setTitle("Repeat", for: .normal)
+    }
+    
+    func setUnRepeat() {
+        self.buttonRepeat.setTitle("UnRepeat", for: .normal)
+    }
 }
 
