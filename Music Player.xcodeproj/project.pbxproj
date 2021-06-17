@@ -41,6 +41,9 @@
 		049DEB132630000B00F04A43 /* QueueViewPresenterRule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049DEB122630000B00F04A43 /* QueueViewPresenterRule.swift */; };
 		049DEB172630001B00F04A43 /* QueueViewPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049DEB162630001B00F04A43 /* QueueViewPresenter.swift */; };
 		049DEB1C2630074F00F04A43 /* QueueTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049DEB1B2630074F00F04A43 /* QueueTableViewCell.swift */; };
+		04A904CF267B311B005807EC /* IntentHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A904CE267B311B005807EC /* IntentHandler.swift */; };
+		04A904D3267B311B005807EC /* SearchRequestExtension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 04A904CC267B311B005807EC /* SearchRequestExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		04A904DF267B3347005807EC /* SearchRequestHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A904DE267B3347005807EC /* SearchRequestHandler.swift */; };
 		04AAECEF26314F3B00524ADC /* MusicPlayerViewPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04AAECEE26314F3B00524ADC /* MusicPlayerViewPresenter.swift */; };
 		04AAECF326314F4700524ADC /* MusicPlayerViewPresenterRule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04AAECF226314F4700524ADC /* MusicPlayerViewPresenterRule.swift */; };
 		04AAECF726315DF600524ADC /* NowPlayingCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04AAECF626315DF600524ADC /* NowPlayingCollectionViewCell.swift */; };
@@ -62,6 +65,30 @@
 		04F5C82B26725C9300EE3A2D /* ArtistInfoViewPresenterRule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F5C82A26725C9300EE3A2D /* ArtistInfoViewPresenterRule.swift */; };
 		FB720AC01D2D2DC6CFE76AD9 /* Pods_Music_Player.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E433BE94E426CE470B941C4A /* Pods_Music_Player.framework */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		04A904D1267B311B005807EC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 04EC8309261F0051004BC444 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 04A904CB267B311B005807EC;
+			remoteInfo = SearchRequestExtension;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		04A904D7267B311B005807EC /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				04A904D3267B311B005807EC /* SearchRequestExtension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		0427EA3E26294A7100F48CC6 /* QueueViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QueueViewController.swift; sourceTree = "<group>"; };
@@ -98,6 +125,12 @@
 		049DEB122630000B00F04A43 /* QueueViewPresenterRule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QueueViewPresenterRule.swift; sourceTree = "<group>"; };
 		049DEB162630001B00F04A43 /* QueueViewPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QueueViewPresenter.swift; sourceTree = "<group>"; };
 		049DEB1B2630074F00F04A43 /* QueueTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QueueTableViewCell.swift; sourceTree = "<group>"; };
+		04A904C6267B30F4005807EC /* Music Player.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Music Player.entitlements"; sourceTree = "<group>"; };
+		04A904CC267B311B005807EC /* SearchRequestExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = SearchRequestExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		04A904CE267B311B005807EC /* IntentHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntentHandler.swift; sourceTree = "<group>"; };
+		04A904D0267B311B005807EC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		04A904DE267B3347005807EC /* SearchRequestHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchRequestHandler.swift; sourceTree = "<group>"; };
+		04A904F3267B367A005807EC /* SearchRequestExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SearchRequestExtension.entitlements; sourceTree = "<group>"; };
 		04AAECEE26314F3B00524ADC /* MusicPlayerViewPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicPlayerViewPresenter.swift; sourceTree = "<group>"; };
 		04AAECF226314F4700524ADC /* MusicPlayerViewPresenterRule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicPlayerViewPresenterRule.swift; sourceTree = "<group>"; };
 		04AAECF626315DF600524ADC /* NowPlayingCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NowPlayingCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -125,6 +158,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		04A904C9267B311B005807EC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		04EC830E261F0051004BC444 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -309,6 +349,17 @@
 			path = QueueTableViewCell;
 			sourceTree = "<group>";
 		};
+		04A904CD267B311B005807EC /* SearchRequestExtension */ = {
+			isa = PBXGroup;
+			children = (
+				04A904F3267B367A005807EC /* SearchRequestExtension.entitlements */,
+				04A904CE267B311B005807EC /* IntentHandler.swift */,
+				04A904D0267B311B005807EC /* Info.plist */,
+				04A904DE267B3347005807EC /* SearchRequestHandler.swift */,
+			);
+			path = SearchRequestExtension;
+			sourceTree = "<group>";
+		};
 		04AAECED26314CD000524ADC /* MusicPlayerViewController */ = {
 			isa = PBXGroup;
 			children = (
@@ -357,6 +408,7 @@
 			isa = PBXGroup;
 			children = (
 				04EC8313261F0051004BC444 /* Music Player */,
+				04A904CD267B311B005807EC /* SearchRequestExtension */,
 				04EC8312261F0051004BC444 /* Products */,
 				3A44668845EDD834E1C733D3 /* Pods */,
 				A246ED70B31B290993660608 /* Frameworks */,
@@ -367,6 +419,7 @@
 			isa = PBXGroup;
 			children = (
 				04EC8311261F0051004BC444 /* Music Player.app */,
+				04A904CC267B311B005807EC /* SearchRequestExtension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -374,6 +427,7 @@
 		04EC8313261F0051004BC444 /* Music Player */ = {
 			isa = PBXGroup;
 			children = (
+				04A904C6267B30F4005807EC /* Music Player.entitlements */,
 				04B48EBE2677661D00B2BA54 /* Utility */,
 				044EEEB52652B22700982488 /* Entitlements.plist */,
 				044F16592625D6480002C608 /* Engine */,
@@ -436,6 +490,23 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		04A904CB267B311B005807EC /* SearchRequestExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 04A904D4267B311B005807EC /* Build configuration list for PBXNativeTarget "SearchRequestExtension" */;
+			buildPhases = (
+				04A904C8267B311B005807EC /* Sources */,
+				04A904C9267B311B005807EC /* Frameworks */,
+				04A904CA267B311B005807EC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SearchRequestExtension;
+			productName = SearchRequestExtension;
+			productReference = 04A904CC267B311B005807EC /* SearchRequestExtension.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
 		04EC8310261F0051004BC444 /* Music Player */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 04EC8328261F0053004BC444 /* Build configuration list for PBXNativeTarget "Music Player" */;
@@ -445,10 +516,12 @@
 				04EC830E261F0051004BC444 /* Frameworks */,
 				04EC830F261F0051004BC444 /* Resources */,
 				51340287F3E5D5227E406A71 /* [CP] Embed Pods Frameworks */,
+				04A904D7267B311B005807EC /* Embed App Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				04A904D2267B311B005807EC /* PBXTargetDependency */,
 			);
 			name = "Music Player";
 			productName = "Music Player";
@@ -464,6 +537,9 @@
 				LastSwiftUpdateCheck = 1220;
 				LastUpgradeCheck = 1220;
 				TargetAttributes = {
+					04A904CB267B311B005807EC = {
+						CreatedOnToolsVersion = 12.2;
+					};
 					04EC8310261F0051004BC444 = {
 						CreatedOnToolsVersion = 12.2;
 					};
@@ -483,11 +559,19 @@
 			projectRoot = "";
 			targets = (
 				04EC8310261F0051004BC444 /* Music Player */,
+				04A904CB267B311B005807EC /* SearchRequestExtension */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		04A904CA267B311B005807EC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		04EC830F261F0051004BC444 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -544,6 +628,15 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		04A904C8267B311B005807EC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				04A904DF267B3347005807EC /* SearchRequestHandler.swift in Sources */,
+				04A904CF267B311B005807EC /* IntentHandler.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		04EC830D261F0051004BC444 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -601,6 +694,14 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		04A904D2267B311B005807EC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 04A904CB267B311B005807EC /* SearchRequestExtension */;
+			targetProxy = 04A904D1267B311B005807EC /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin PBXVariantGroup section */
 		04EC831A261F0051004BC444 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
@@ -621,6 +722,46 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		04A904D5267B311B005807EC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = SearchRequestExtension/SearchRequestExtension.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = "";
+				INFOPLIST_FILE = SearchRequestExtension/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "Jan.Music-Player.SearchRequestExtension";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		04A904D6267B311B005807EC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = SearchRequestExtension/SearchRequestExtension.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = "";
+				INFOPLIST_FILE = SearchRequestExtension/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "Jan.Music-Player.SearchRequestExtension";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 		04EC8326261F0053004BC444 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -741,11 +882,12 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = CEFF69BEF10CBB61A0557F18 /* Pods-Music Player.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_ENTITLEMENTS = "";
+				CODE_SIGN_ENTITLEMENTS = "Music Player/Music Player.entitlements";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = H9Y26B6GZB;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = "Music Player/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -762,11 +904,12 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = FD83DE675B1F06F73E1BAC49 /* Pods-Music Player.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_ENTITLEMENTS = "";
+				CODE_SIGN_ENTITLEMENTS = "Music Player/Music Player.entitlements";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = H9Y26B6GZB;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = "Music Player/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -782,6 +925,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		04A904D4267B311B005807EC /* Build configuration list for PBXNativeTarget "SearchRequestExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				04A904D5267B311B005807EC /* Debug */,
+				04A904D6267B311B005807EC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		04EC830C261F0051004BC444 /* Build configuration list for PBXProject "Music Player" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

@@ -7,6 +7,7 @@
 
 import UIKit
 import CoreData
+import Intents
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -27,6 +28,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 //        self.window?.makeKeyAndVisible()
 //
 //
+        
+        doRequestSiriAuthorization()
+        
         return true
     }
     
@@ -92,4 +96,19 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 //    }
 
 }
+
+extension AppDelegate {
+    private func doRequestSiriAuthorization() {
+        INPreferences.requestSiriAuthorization({ status in
+            if status == .authorized {
+                print("SIRI Authorize")
+            } else {
+                print("SIRI not Authorize")
+            }
+        })
+    }
+}
+
+
+
 
