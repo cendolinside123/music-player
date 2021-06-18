@@ -68,11 +68,15 @@ extension MusicPlayerUtility {
     }
     
     func play() {
-        MusicPlayer.sharedInstance.play()
+        DispatchQueue.main.async {
+            MusicPlayer.sharedInstance.play()
+        }
     }
     
     func setCurrentURL(url: String) {
-        currentURL = url
+        DispatchQueue.main.async {
+            self.currentURL = url
+        }
     }
     
     func togglePlayPause() {

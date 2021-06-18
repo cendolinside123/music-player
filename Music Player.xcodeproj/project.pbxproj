@@ -44,6 +44,17 @@
 		04A904CF267B311B005807EC /* IntentHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A904CE267B311B005807EC /* IntentHandler.swift */; };
 		04A904D3267B311B005807EC /* SearchRequestExtension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 04A904CC267B311B005807EC /* SearchRequestExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		04A904DF267B3347005807EC /* SearchRequestHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A904DE267B3347005807EC /* SearchRequestHandler.swift */; };
+		04A904FD267B3874005807EC /* SearchRequestHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A904DE267B3347005807EC /* SearchRequestHandler.swift */; };
+		04A90500267B387A005807EC /* IntentHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A904CE267B311B005807EC /* IntentHandler.swift */; };
+		04A90503267B3884005807EC /* Repo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047F01FC2624636100244514 /* Repo.swift */; };
+		04A90506267B3889005807EC /* Music.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047F01F92624628B00244514 /* Music.swift */; };
+		04A90509267B38C6005807EC /* MusicPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 044F16682625D77F0002C608 /* MusicPlayer.swift */; };
+		04A90511267B38E0005807EC /* MusicPlayerUtility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B48EBF2677668C00B2BA54 /* MusicPlayerUtility.swift */; };
+		04A90519267B3902005807EC /* MusicPlayerUtilityPresenterRule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B48EC4267766B300B2BA54 /* MusicPlayerUtilityPresenterRule.swift */; };
+		04A9051C267B3910005807EC /* MusicPlayerRule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 044F16672625D77F0002C608 /* MusicPlayerRule.swift */; };
+		04A9051F267B3932005807EC /* MusicPlayerObserverPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 044F16662625D77F0002C608 /* MusicPlayerObserverPresenter.swift */; };
+		04A90522267B3935005807EC /* MusicPlayerPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 044F16652625D77F0002C608 /* MusicPlayerPresenter.swift */; };
+		04A90525267B393A005807EC /* MediaCommandCenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 044EEEBE2652B59B00982488 /* MediaCommandCenter.swift */; };
 		04AAECEF26314F3B00524ADC /* MusicPlayerViewPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04AAECEE26314F3B00524ADC /* MusicPlayerViewPresenter.swift */; };
 		04AAECF326314F4700524ADC /* MusicPlayerViewPresenterRule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04AAECF226314F4700524ADC /* MusicPlayerViewPresenterRule.swift */; };
 		04AAECF726315DF600524ADC /* NowPlayingCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04AAECF626315DF600524ADC /* NowPlayingCollectionViewCell.swift */; };
@@ -632,8 +643,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				04A90503267B3884005807EC /* Repo.swift in Sources */,
+				04A90519267B3902005807EC /* MusicPlayerUtilityPresenterRule.swift in Sources */,
 				04A904DF267B3347005807EC /* SearchRequestHandler.swift in Sources */,
+				04A90522267B3935005807EC /* MusicPlayerPresenter.swift in Sources */,
 				04A904CF267B311B005807EC /* IntentHandler.swift in Sources */,
+				04A90511267B38E0005807EC /* MusicPlayerUtility.swift in Sources */,
+				04A9051F267B3932005807EC /* MusicPlayerObserverPresenter.swift in Sources */,
+				04A90525267B393A005807EC /* MediaCommandCenter.swift in Sources */,
+				04A90509267B38C6005807EC /* MusicPlayer.swift in Sources */,
+				04A9051C267B3910005807EC /* MusicPlayerRule.swift in Sources */,
+				04A90506267B3889005807EC /* Music.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -669,6 +689,7 @@
 				04B48EC02677668C00B2BA54 /* MusicPlayerUtility.swift in Sources */,
 				047F023226246F3700244514 /* CoreDataMusic.swift in Sources */,
 				044F16532625A53A0002C608 /* SubContentData.swift in Sources */,
+				04A904FD267B3874005807EC /* SearchRequestHandler.swift in Sources */,
 				047F01F52624512B00244514 /* SubContent.swift in Sources */,
 				044F16572625D5550002C608 /* ItemCollectionViewCell.swift in Sources */,
 				044EEEBA2652B3A400982488 /* SceneDelegate.swift in Sources */,
@@ -676,6 +697,7 @@
 				04F5C82426725C5700EE3A2D /* ArtistInfoViewController.swift in Sources */,
 				04AAECF326314F4700524ADC /* MusicPlayerViewPresenterRule.swift in Sources */,
 				04B48EC5267766B300B2BA54 /* MusicPlayerUtilityPresenterRule.swift in Sources */,
+				04A90500267B387A005807EC /* IntentHandler.swift in Sources */,
 				048223C7262F05DE0033DCF2 /* HomeViewPresenter.swift in Sources */,
 				0448E592261FFB6300789E6D /* HomeViewController.swift in Sources */,
 				0427EA3F26294A7100F48CC6 /* QueueViewController.swift in Sources */,

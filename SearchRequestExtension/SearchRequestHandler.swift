@@ -16,7 +16,7 @@ class SearchRequestHandler: NSObject,INPlayMediaIntentHandling {
     
     @available(iOSApplicationExtension 12.0, *)
     func handle(intent: INPlayMediaIntent, completion: @escaping (INPlayMediaIntentResponse) -> Void) {
-        let respose = INPlayMediaIntentResponse(code: .handleInApp, userActivity: .none)
+        let respose = INPlayMediaIntentResponse(code: .handleInApp, userActivity: nil)
         completion(respose)
     }
     
@@ -25,7 +25,14 @@ class SearchRequestHandler: NSObject,INPlayMediaIntentHandling {
     func resolveMediaItems(for intent: INPlayMediaIntent, with completion: @escaping ([INPlayMediaMediaItemResolutionResult]) -> Void) {
         print("\(intent.mediaSearch?.mediaName)")
         
-        completion([INPlayMediaMediaItemResolutionResult.unsupported()])
+        let song = Repo.gallow_ParkestAlbum[1]
+        
+        MusicPlayerUtility.shared.setCurrentURL(url: song.url)
+        MusicPlayerUtility.shared.setup(getMusic: song)
+        MusicPlayerUtility.shared.play()
+        
+        
+        completion([INPlayMediaMediaItemResolutionResult.success(with: INMediaItem(identifier: nil, title: song.title, type: .song, artwork: nil))])
     }
 
     
